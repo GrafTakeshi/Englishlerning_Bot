@@ -7,3 +7,4 @@ bot = TeleBot(token_bot, state_storage=state_storage)
 
 #Параметры БД
 
+db_connection = "dbname=postgres user=postgres password=postgres"
