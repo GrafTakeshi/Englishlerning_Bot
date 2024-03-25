@@ -1,3 +1,5 @@
-insert into dictionary values(1,'blue', 'Синий'), (2, 'Shop', 'Магазин'), (3, 'Dog', 'Собака'), (4, 'Cat', 'Кошка'),
-(5, 'Flower', 'Цветок'), (6, 'City', 'Город'), (7, 'Big', 'Большой'), (8, 'Girl', 'Девушка'), (9, 'Peace', 'Мир'),
-(10, 'Russia', 'Россия');
+insert into dictionary(enword, ruword) values('blue', 'Синий'),('Shop', 'Магазин'), ('Dog', 'Собака'), ('Cat', 'Кошка'),
+('Flower', 'Цветок'), ('City', 'Город'), ('Big', 'Большой'), ('Girl', 'Девушка'), ('Peace', 'Мир'),
+('Russia', 'Россия');
+
+
