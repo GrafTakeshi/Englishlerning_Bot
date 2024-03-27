@@ -4,7 +4,8 @@ from telebot import types, custom_filters
 from telebot.storage import StateMemoryStorage
 from telebot.handler_backends import State, StatesGroup
 from config import bot
-from db_func import add_new_word, get_user_words, welcome, delite_from_userdict
+# from db_func import
+from db_module import add_new_word, welcome, delite_from_userdict, get_user_words
 
 print('Start telegram bot...')
 
@@ -33,6 +34,8 @@ class MyStates(StatesGroup):
     target_word = State()
     translate_word = State()
     another_words = State()
+
+
 
 
 @bot.message_handler(commands=['cards', 'start'])

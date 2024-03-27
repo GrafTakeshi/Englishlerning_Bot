@@ -26,7 +26,6 @@ def welcome(message: Message, cid):
 
                 ])
                 conn.commit()
-                conn.close()
 
 
 def add_new_word(message: Message):
@@ -77,7 +76,6 @@ def add_new_word(message: Message):
                     else:
                         log_message = f' Пара {enword} - {ruword} уже присутствует в Базе'
                 conn.commit()
-                conn.close()
             bot.send_message(chat_id=cid, text=log_message)
     else:
         bot.send_message(chat_id=cid, text=f'Некоректный ввод повторите операцию')
@@ -94,7 +92,6 @@ def delite_from_userdict(cid, targetword):
             log_message = f'Пара {userwords_list[0][1]} - {userwords_list[0][2]} успешно удалена из вашего словаря'
             bot.send_message(chat_id=cid, text=log_message)
         conn.commit()
-        conn.close()
 
 
 def get_user_words(cid):
@@ -110,5 +107,4 @@ def get_user_words(cid):
             ower_list = random.choices(userwords_list, k=4)
             ower_word_list = [ower_list[0][0], ower_list[1][0], ower_list[2][0], ower_list[3][0]]
     conn.commit()
-    conn.close()
     return target_list, ower_word_list
