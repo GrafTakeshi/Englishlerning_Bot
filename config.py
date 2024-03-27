@@ -1,7 +1,7 @@
 from sqlalchemy import URL
 from telebot import TeleBot, StateMemoryStorage
 
-TG_TOKEN = '5966882748:AAG7kTnI-Hb426vkRxXyhuGfEnKjDZeXu4E'
+TG_TOKEN = ''
 state_storage = StateMemoryStorage()
 bot = TeleBot(TG_TOKEN, state_storage=state_storage)
 
