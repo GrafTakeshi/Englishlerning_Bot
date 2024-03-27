@@ -36,8 +36,6 @@ class MyStates(StatesGroup):
     another_words = State()
 
 
-
-
 @bot.message_handler(commands=['cards', 'start'])
 def create_cards(message):
     cid = message.chat.id
@@ -108,7 +106,7 @@ def message_reply(message):
             hint = show_hint(*hint_text)
         else:
             for btn in buttons:
-                if btn.text == text:
+                if btn.text == text and '❌' not in text:
                     btn.text = text + '❌'
                     break
             hint = show_hint("Допущена ошибка!",
