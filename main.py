@@ -1,8 +1,9 @@
 import random
 
 from telebot import types, custom_filters
-from telebot.storage import StateMemoryStorage
 from telebot.handler_backends import State, StatesGroup
+from telebot.storage import StateMemoryStorage
+
 from config import bot
 # from db_func import
 from db_module import add_new_word, welcome, delite_from_userdict, get_user_words
@@ -113,6 +114,8 @@ def message_reply(message):
                              f"Попробуй ещё раз вспомнить слово 🇷🇺{data['translate_word']}")
     markup.add(*buttons)
     bot.send_message(message.chat.id, hint, reply_markup=markup)
+    if target_word in text:
+        create_cards(message)
 
 
 bot.add_custom_filter(custom_filters.StateFilter(bot))
